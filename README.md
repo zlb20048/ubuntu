@@ -1,5 +1,7 @@
 # ubuntu
 
+[SSR相关配置](./ssr.md)
+
 ## git相关
 ### git系统配置
 ```Bash
