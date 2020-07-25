@@ -5,37 +5,7 @@
 
 [ss配置的一些坑](./Ubutun配置shadowSocket更改相关的坑.md)
 
-## git相关
-### git系统配置
-```Bash
-function gitpush {
-    branch=`git branch -r |grep 'm/' |awk -F'-> ' '{print $2}'` &&
-        l=`echo $branch | awk -F'/' '{print $1}'` &&
-        rr=`echo $branch | awk -F'/' '{print $2}'` &&
-        echo "git push ${l} `git rev-parse --abbrev-ref HEAD`:refs/for/${rr}" && git push ${l} `git rev-parse --abbrev-ref HEAD`:refs/for/${rr}
-}
-
-function gitrebase {
-    branch=`git branch -r | grep 'm/' | awk -F'-> ' '{print $2}'` &&
-        l=`echo $branch | awk -F'/' '{print $1}'` &&
-        rr=`echo $branch | awk -F'/' '{print $2}'` &&
-        echo "git pull --rebase ${l} ${rr}" &&
-        git pull --rebase ${l} ${rr}
-
-}
-```
-### git环境配置
-```Bash
-[alias]
-        st = status
-        br = branch
-        co = checkout
-        ci = commit
-        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-```
-
-### git工具
-gitk gitg
+[git相关](./git相关.md)
 
 ## 常用工具
 1. geany 可视化的文本编辑工具，主要是用来进行日志的过滤
